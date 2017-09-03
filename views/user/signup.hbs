@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Sign up</h1>
+        {{# if hasErrors }}
+            <div class="alert alert-danger">
+                {{# each messages}}
+                    <p>{{this}} </p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <form action="/user/signup" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phnNumber">Mobile Number</label>
+                <input type="phone" id="phnNumber" name="phnNumber" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="work">Work : </label>
+                <input type="text" id="work" name="work" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" class="form-control">
+            </div>
+
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="img">Browse Image</label>
+                <input type="file" name="img" id="img" class="form-control" accept="image/*">
+                <script>
+                    $(function()
+                    {
+                        console.log("ssds");
+                         var x = document.getElementById("img").value; 
+                            console.log(x);
+                        $('#img').on('change',function ()
+                        {
+                           // var filePath = $(this).val();
+                             var x = document.getElementById("img").value; 
+                            console.log(x);
+                        });
+                    });
+                </script>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

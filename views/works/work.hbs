@@ -1,0 +1,19 @@
+
+{{#each data}}
+
+<div class="col-md-3">
+	<a href="/work/{{this}}"><div class="worker">
+		{{this}}
+	</div>
+</div></a>
+<style>
+.worker{
+	background: #337ab7;
+	color: #fff;
+	padding: 50px 30px;
+	font-size: 21px;
+	text-align:center;
+}
+
+</style>
+{{/each}}

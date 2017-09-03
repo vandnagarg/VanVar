@@ -1,0 +1,29 @@
+
+<div class="well ">
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center" >
+						<img src="/images/{{data.img}}" style="width:60%;"  alt="">
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<h3>Name : {{data.name}}</h3> 
+						Phone Number: {{data.phnNumber}}<br>
+						City : {{data.city}} <br>
+						Work : {{data.work}}<br>
+						Age : {{data.age}}<br>
+						Ratings : {{ratings}}
+				</div>
+			</div>
+</div>
+{{#each review}}
+	<div class="well">
+	<h2>Title : {{this.title}}</h2>
+	<p>Description :  {{this.disc}}</p>
+	<p>Ratings: {{this.rate}}</p>
+	<p>Author : {{this.author}}</p>
+<!-- 	<div class="blockquote">{{thi}}</div>
+ -->	</div>
+{{/each}}
+
+
+
+
